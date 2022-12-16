@@ -8,6 +8,36 @@
 .contact .contact-profile {
     margin-top: 100px;
 }
+.contact .contact-profile img {
+    position: relative;
+    z-index: 1;
+}
+.contact .contact-profile .contact-bg1 {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    z-index: 0;
+    top: 30px;
+    left: 60px;
+    border-radius: 45%;
+    margin-left: 50px;
+    margin-top: 30px;
+    background: #ffffff92;
+    animation: move 3s infinite linear;
+}
+.contact .contact-profile .contact-bg2 {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    z-index: 0;
+    top: 30px;
+    left: 60px;
+    border-radius: 45%;
+    margin-left: 40px;
+    margin-top: 10px;
+    background: #ffffff92;
+    animation: move 3s infinite linear;
+}
 .contact .contact-info {
     margin-left: 130px;
 }
