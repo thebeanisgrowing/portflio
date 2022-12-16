@@ -115,4 +115,31 @@
     background-size: cover;
     margin-top: 70px;
     margin-bottom: -70px;
+    filter: grayscale(60%);
+}
+.point1 {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    z-index: 1;
+    top: 120px;
+    left: 320px;
+    border-radius: 45%;
+    margin-left: 40px;
+    margin-top: 10px;
+    background: #fd604b92;
+    animation: move 3s infinite linear;
+}
+.point2 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    left: 300px;
+    border-radius: 45%;
+    margin-left: 40px;
+    margin-top: 10px;
+    background: #fd604b92;
+    animation: move 3s infinite linear;
 }
