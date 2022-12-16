@@ -1,12 +1,551 @@
-@font-face {
-    font-family: 'PyeongChangPeace-Bold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
+/* 초기화코드 */
+*{
+    margin: 0;
+    padding: 0;
 }
-body {
-    font-family: 'PyeongChangPeace-Bold';
-    text-align: center;
+/* 폰트 */
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 100;
+    src: url('https://fonts.gstatic.com/s/notosanskr/v27/Pby6FmXiEBPT4ITbgNA5CgmOsn7tqoAetwxcvEcQNuukkRBBEIyMcFQ.0.woff2') format('woff2');
+  }
+/* 여러곳 공유요소 */
+#wrap {
+    width: 100%;
+    height: auto;
     background-color: black;
-    color: rgb(152, 251, 213);
+    color: #FFFFFF;
+    font-family: 'Noto Sans KR';
+}
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+/* 스크롤바 */
+/* 스크롤바의 넓이 */
+body::-webkit-scrollbar {
+    display: none;
+}
+/* 헤더 */
+/* 네비게이션 */
+header nav{
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 46px;
+}
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+
+    padding-top: 82px;
+    padding-right: 119px;
+}
+header nav ul li {
+    margin-left: 112px;
+}
+header nav ul li a:link {
+    text-decoration: none;
+    color: #90DABE;
+}
+header nav ul li a:visited {
+    text-decoration: none;
+    color: #90DABE;
+}
+/* 첫번째 섹션 visual */
+.visual {
+    position: relative;
+    width: 100%;
+    height: 530px;
+    margin-top: 200px;
+    margin-bottom: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+/* 첫번째 슬로건 */
+.visual .first {
+    width: 485px;
+    margin-top: 0px;
+    margin-left: 168px;
+}
+.visual .first h1{
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 119px;
+
+    color: #FFFFFF;
+}
+/* 메인이미지 */
+#visualmain {
+    position: fixed;
+    left: 40%;
+    opacity: 100%;
+
+    transition: all 3s;
+}
+#visualmain.hidden {
+    opacity: 0%;
+}
+#visualmain img {
+    position: relative;
+    z-index: 2;
+    margin-left: 100px;
+    margin-top: 100px;
+    opacity: 100%;
+}
+.mainmoving1 {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: 1;
+    top: 30px;
+    left: 60px;
+    border-radius: 45%;
+    background: #ffffff92;
+    animation: move 3s infinite linear;
+}
+.mainmoving2 {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: 1;
+    top: 80px;
+    left: 40px;
+    border-radius: 45%;
+    background: #ffffffa1;
+    animation: move 3s infinite linear;
+}
+.mainmoving3 {
+    width: 230px;
+    height: 230px;
+    position: absolute;
+    z-index: 1;
+    top: 70px;
+    left: 70px;
+    border-radius: 45%;
+    background: #ffffff77;
+    animation: move 3s infinite linear;
+}
+@keyframes move {
+    100% {
+      transform: rotate(360deg);
+    }
+}  
+/* 두번째 슬로건 */
+.visual .second {
+    margin-top: 0px;
+    margin-right: 119px;
+}
+.visual .second h2 {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 139px;
+    text-align: right;
+
+    color: #FFFFFF;
+}
+/* 스크롤다운 */
+.visual .scroll {
+    position: relative;
+    top: 200px;
+    left: 300px;
+    display: flex;
+    align-items: flex-end;
+}
+.visual .scroll img {
+    animation: UpDownJump 1s ease-in 0s infinite alternate;
+}
+@keyframes UpDownJump {
+    0% {
+        top: 0px;
+        transform: scaleY(1);
+    }
+    100% {
+        top: -10%;
+        transform: scaleY(0.8);
+    }
+} 
+.visual .scroll span{
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 58px;
+    margin-top: 0px;
+    margin-left: 23px;
+}
+/* 웹사이트 진입 */
+.intro {
+    position: relative;
+    width: 100%;
+    height: 500px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+/* 첫번째 문구 */
+.intro .hello {
+    width: 485px;
+    height: 147px;
+    margin-top: 0px;
+    margin-left: 168px;
+}
+.intro .hello h3{
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 139px;
+    text-align: left;
+    
+    color: #FFFFFF;
+}
+/* 두번째 문구 */
+.intro .name {
+    width: 700px;
+    height: 147px;
+    margin-top: 0px;
+    margin-right: 168px;
+}
+.intro .name h3 {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 139px;
+    text-align: right;
+
+    color: #FFFFFF;
+}
+/* 메인이미지 */
+.visualmain_bloom {
+    background-image: url('../img/bloom_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: 118px;
+    margin-top: 50px;
+    width: 1665px;
+    height: 253px;
+    text-align: center;
+    align-items: center;
+
+    transition: all 3s;
+}
+#bloom {
+    position: relative;
+    z-index: 2;
+    margin-left: 0px;
+    margin-top: 0px;
+    opacity: 100%;
+
+    transition: all 2s;
+}
+#bloom.active {
+    animation: rotate 3s linear infinite;
+    margin-top: 300px;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 
+/* 자기소개 */
+.timeline {
+    position: relative;
+    width: 100%;
+    height: 3000px;
+    margin-top: 200px;
+    background-image: url('../img/profile_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+}
+.timeline .skills {
+    margin-left: 190px;
+    margin-top: 130px;
+}
+.timeline .skills .profile {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.timeline .skills .profile .myname {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 139px;
+
+    color: #000000;
+    background-color: #FFFFFF;
+    padding-left: 46px;
+    padding-top: 27px;
+    padding-right: 120px;
+    margin-left: 96px;
+}
+.timeline .skills .profile .myname span {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 350;
+    font-size: 64px;
+    line-height: 93px;
+    margin-left: -10px;
+}
+.timeline .skills .profile .birthday {
+    width: 600px;
+    height: 105px;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 350;
+    font-size: 64px;
+    line-height: 93px;
+
+    color: #000000;
+    background-color: #FFFFFF;
+    padding-left: 57px;
+    padding-top: 30px;
+    margin-left: 96px;
+    margin-top: 30px;
+}
+.skill {
+    position: absolute;
+    top: 431px;
+    left: 450px;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 93px;
+
+    color: #FFFFFF;
+}
+.skill1 {
+    position: absolute;
+    top: 785px;
+    left: 380px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 350;
+    font-size: 36px;
+    line-height: 52px;
+
+    color: #FFFFFF;
+}
+.skill2 {
+    position: absolute;
+    top: 1160px;
+    left: 470px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 350;
+    font-size: 36px;
+    line-height: 52px;
+
+    color: #FFFFFF;
+}
+.skill3 {
+    position: absolute;
+    top: 1420px;
+    left: 410px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 350;
+    font-size: 36px;
+    line-height: 52px;
+
+    color: #FFFFFF;
+}
+.edu {
+    position: absolute;
+    top: 80px;
+    right: 400px;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 93px;
+
+    color: #FFFFFF;
+}
+.edu1 {
+    position: absolute;
+    top: 280px;
+    right: 90px;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 350;
+    font-size: 36px;
+    line-height: 52px;
+
+    color: #FFFFFF;
+}
+.edu2 {
+    position: absolute;
+    top: 500px;
+    right: 230px;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 350;
+    font-size: 36px;
+    line-height: 52px;
+
+    color: #FFFFFF;
+}
+.edu3 {
+    width: 428px;
+    height: auto;
+    position: absolute;
+    top: 730px;
+    right: 70px;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 350;
+    font-size: 36px;
+    line-height: 52px;
+
+    color: #FFFFFF;
+}
+.timeline .edus {
+    margin-right: 500px;
+    margin-top: 75px;
+}
+.keyword {
+    position: relative;
+    width: 100%;
+    height: 1300px;
+    text-align: center;
+
+    margin-left: 152px;
+    margin-top: -1420px;
+}
+.keyword h3 {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 550;
+    font-size: 64px;
+    line-height: 93px;
+
+    text-align: center;
+    color: #FFFFFF;
+    margin-left: -250px;
+}
+.keyword p {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 350;
+    font-size: 40px;
+    line-height: 58px;
+    margin-bottom: 102px;
+
+    text-align: center;
+    color: #FFFFFF;
+    margin-left: -250px;
+}
+.keyword .keywordlist {
+    width: 1606px;
+    height: 670px;
+    background-image: url('../img/keyword.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.work-choice {
+    position: relative;
+    height: 1000px;
+    margin-top: 100px;
+    text-align: center;
+}
+.work-choice ul {
+    width: 100%;
+    text-align: center;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.work-choice ul li {
+    width: 895px;
+    height: 895px;
+    margin-left: 20px;
+    overflow: hidden;
+}
+.work-choice ul li .work1-name {
+    position: absolute;
+    z-index: 3;
+    left: 750px;
+    top: 150px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 93px;
+
+    color: #FFFFFF;
+    transform: rotate(90deg);
+}
+.work-choice ul li .work2-name {
+    position: absolute;
+    z-index: 3;
+    right: -50px;
+    top: 200px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 93px;
+
+    color: #FFFFFF;
+    transform: rotate(90deg);
+}
+.work-choice ul li a img {
+    transition: all 0.2s linear;
+}
+.work-choice ul li a:hover img {
+    transform: scale(1.4);
+}
+footer {
+    position: relative;
+    height: 380px;
+    margin-top: 200px;
+    text-align: center;
+}
+footer .line {
+    width: 90%;
+    height: 1px;
+    margin-left: 5%;
+
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+footer .copyright {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 58px;
+
+    color: #FFFFFF;
+    margin-top: 200px;
 }

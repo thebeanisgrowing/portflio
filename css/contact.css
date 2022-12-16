@@ -1,0 +1,88 @@
+.contact {
+    position: relative;
+    height: 1100px;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.contact .contact-profile {
+    margin-top: 100px;
+}
+.contact .contact-info {
+    margin-left: 130px;
+}
+.contact .contact-info h1 {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 70px;
+
+    color: #FFFFFF;
+}
+.contact .contact-info h2 {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 58px;
+
+    color: #FFFFFF;
+}
+.contact .contact-info .contact-line1 {
+    width: 560px;
+    height: 11px;
+    left: 778px;
+    top: 323px;
+
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    margin-top: 30px;
+}
+.contact .contact-info .contact-line2 {
+    width: 957px;
+    height: 8px;
+    left: 778px;
+    top: 620px;
+
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    margin-top: 37px;
+}
+.contact .contact-info .contact-link {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 46px;
+
+    color: #FFFFFF;
+    margin-top: 70px;
+}
+.contact .contact-info .contact-link a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.contact .contact-info .contact-link a:visited {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.address {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 58px;
+
+    color: #FFFFFF;
+    margin-top: 30px;
+}
+.map {
+    width: 1040px;
+    height: 405px;
+    background-image: url('../img/map.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 70px;
+    margin-bottom: -70px;
+}
